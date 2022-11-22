@@ -1,0 +1,6 @@
+# exclude VSCode and PlatformIO dirs
+/.vscode/*
+!/.vscode/extensions.json
+/.pio/*
+
+*.log
