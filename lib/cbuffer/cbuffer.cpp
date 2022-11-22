@@ -21,7 +21,7 @@ void cbuffer_add(cbuffer_t* buf, uint8_t item) {
 
 uint8_t cbuffer_get(cbuffer_t* buf)
 {
-    return (cbuffer_empty(buff))? 0 : buf->buffer[buf->tail++];
+    return (cbuffer_empty(buf))? 0 : buf->buffer[buf->tail++];
 }
 
 bool cbuffer_full(cbuffer_t* buf)
