@@ -17,7 +17,7 @@ void test_circular_buffer_not_empty_after_new_element_added() {
     cbuffer_init(&buff);
     cbuffer_add(&buff, 100);
 
-    TEST_ASSERT_FAILED(cbuffer_empty(&buff));
+    TEST_ASSERT_FALSE(cbuffer_empty(&buff));
 }
 
 void test_circular_buffer_reports_full_correctly() {

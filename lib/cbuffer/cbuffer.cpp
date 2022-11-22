@@ -11,7 +11,8 @@ bool cbuffer_empty(cbuffer_t* buf)
     return buf->head == buf->tail;
 }
 
-void cbuffer_add(cbuffer_t* buf, uint8_t item) {
+void cbuffer_add(cbuffer_t* buf, uint8_t item)
+{
     if(cbuffer_full(buf))
         buf->tail = ((buf->tail + 1) & BUFFER_MASK);
 
@@ -32,4 +33,4 @@ bool cbuffer_full(cbuffer_t* buf)
 void cbuffer_clear(cbuffer_t* buf)
 {
     buf->head = buf->tail;
-    }
+}
